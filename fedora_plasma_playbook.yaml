@@ -1,0 +1,190 @@
+- name: Fedora KDE Plasma playbook
+  hosts: localhost
+  tasks:
+   - name: Enable RPM Fusion repositories
+     when: ansible_distribution == 'Fedora'
+     become: true
+     become_method: ansible.builtin.sudo
+     ansible.builtin.dnf:
+       state: present
+       name:
+         - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
+         - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm
+
+   - name: Enable copr repositories
+     when: ansible_distribution == 'Fedora'
+     become: true
+     become_method: ansible.builtin.sudo
+     community.general.copr:
+       host: copr.fedorainfracloud.org
+       state: enabled
+       name: "{{ item }}"
+     loop:
+           - che/nerd-fonts
+         # - atim/starship
+
+   - name: Install system packages
+     when: ansible_distribution == 'Fedora'
+     become: true
+     become_method: ansible.builtin.sudo
+     ansible.builtin.dnf:
+       state: present
+       name:
+         - heif-pixbuf-loader
+         - libheif-tools
+         - neovim
+         - google-noto-sans-runic-fonts
+         - fira-code-fonts
+         - fastfetch
+         - steam
+         - fish
+         - akmod-nvidia
+         - git-core
+         - yt-dlp
+         - nerd-fonts
+
+   - name: Install Homebrew
+     when: ansible_distribution == 'Fedora'
+     ansible.builtin.command: '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+
+# ==================== RPM Fusion ==================== #
+   - name: Update @core
+     when: ansible_distribution == 'Fedora'
+     become: true
+     become_method: ansible.builtin.sudo
+     ansible.builtin.dnf:
+       state: present
+       name: "@core"
+
+   - name: FFmpeg
+     when: ansible_distribution == 'Fedora'
+     become: true
+     become_method: ansible.builtin.sudo
+     ansible.builtin.command: "dnf swap ffmpeg-free ffmpeg --allowerasing"
+
+   - name: Codecs
+     when: ansible_distribution == 'Fedora'
+     become: true
+     become_method: ansible.builtin.sudo
+     ansible.builtin.command: 'dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin'
+
+   - name: Update @sound-and-video
+     when: ansible_distribution == 'Fedora'
+     become: true
+     become_method: ansible.builtin.sudo
+     ansible.builtin.dnf:
+       state: present
+       name: "@sound-and-video"
+
+   - name: Install hardware accelerated codecs
+     when: ansible_distribution == 'Fedora'
+     become: true
+     become_method: ansible.builtin.sudo
+     ansible.builtin.dnf:
+       state: present
+       name:
+         - intel-media-driver
+         - libva-intel-driver
+         - libva-nvidia-driver
+
+   - name: DVD
+     when: ansible_distribution == 'Fedora'
+     become: true
+     become_method: ansible.builtin.sudo
+     ansible.builtin.dnf:
+       state: present
+       name:
+         - rpmfusion-free-release-tainted
+         - libdvdcss
+
+   - name: Firmware repo
+     when: ansible_distribution == 'Fedora'
+     become: true
+     become_method: ansible.builtin.sudo
+     ansible.builtin.dnf:
+       state: present
+       name:
+         - rpmfusion-nonfree-release-tainted
+
+   - name: Install firmwares
+     when: ansible_distribution == 'Fedora'
+     become: true
+     become_method: ansible.builtin.sudo
+     ansible.builtin.command: 'dnf --repo=rpmfusion-nonfree-tainted install "*-firmware"'
+# ==================== RPM Fusion ==================== #
+
+   - name: Remove not needed packages
+     when: ansible_distribution == 'Fedora'
+     become: true
+     become_method: ansible.builtin.sudo
+     ansible.builtin.dnf:
+       state: absent
+       name:
+         - mediawriter
+         - kontact
+         - kmail
+         - okular
+         - dragonplayer
+         - elisa-player
+         - firewall-config
+         - kamoso
+         - kmahjongg
+         - kmines
+         - kmousetool
+         - kmouth
+         - kolourpaint
+         - kpat
+         - krdc
+         - krfb
+         - ktnef
+         - akregator
+         - neochat
+         - skanpage
+         - korganizer
+         - kaddressbook
+         - kfind
+         - kcharselect
+         - kgpg
+         - virtualbox-guest-additions
+         - kwalletmanager5
+
+   - name: Install Homebrew packages
+     when: ansible_distribution == 'Fedora'
+     community.general.homebrew:
+       name:
+         - gallery-dl
+         - topgrade
+
+   - name: Install Audacious flatpak from fedora
+     when: ansible_distribution == 'Fedora'
+     community.general.flatpak:
+       remote: "fedora"
+       state: present
+       name: "org.atheme.audacious" # Audacious
+
+   - name: Install flatpaks from flathub
+     when: ansible_distribution == 'Fedora'
+     community.general.flatpak:
+       state: present
+       name:
+         - chat.simplex.simplex     # SimpleX Chat
+         - com.github.Anuken.Mindustry  # Mindustry
+         - com.github.wwmm.easyeffects  # Easy Effects
+         - com.heroicgameslauncher.hgl  # Heroic Games Launcher
+         - com.obsproject.Studio    # OBS Studio
+         - dev.vencord.Vesktop  # Vesktop
+         - io.mpv.Mpv   # mpv
+         - md.obsidian.Obsidian # Obsidian
+         - net.davidotek.pupgui2    # ProtonUp-Qt
+         - net.lutris.Lutris    # Lutris
+         - org.gimp.GIMP    # GIMP
+         - org.inkscape.Inkscape    # Inkscape
+         - org.kartkrew.RingRacers  # Ring Racers
+         - org.kde.kdenlive # Kdenlive
+         - org.keepassxc.KeePassXC  # KeePassXC
+         - org.localsend.localsend_app  # LocalSend
+         - org.mozilla.Thunderbird  # Thunderbird
+         - org.prismlauncher.PrismLauncher  # Prism Launcher
+         - org.qbittorrent.qBittorrent  # qBittorrent
+         - org.signal.Signal    # Signal Desktop
+         - sh.ppy.osu   # osu!
