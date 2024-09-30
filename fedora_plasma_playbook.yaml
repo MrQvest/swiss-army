@@ -155,13 +155,6 @@
           - gallery-dl
           - topgrade
 
-    - name: Install Audacious flatpak from fedora
-      when: ansible_distribution == 'Fedora'
-      community.general.flatpak:
-        remote: "fedora"
-        state: present
-        name: "org.atheme.audacious" # Audacious
-
     - name: Install flatpaks from flathub
       when: ansible_distribution == 'Fedora'
       community.general.flatpak:
@@ -188,3 +181,4 @@
           - org.qbittorrent.qBittorrent  # qBittorrent
           - org.signal.Signal    # Signal Desktop
           - sh.ppy.osu   # osu!
+          - org.fooyin.fooyin # fooyin Music Player
