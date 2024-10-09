@@ -41,6 +41,7 @@
           - akmod-nvidia
           - git-core
           - yt-dlp
+          - aria2
           - nerd-fonts
 
     - name: Install Homebrew
