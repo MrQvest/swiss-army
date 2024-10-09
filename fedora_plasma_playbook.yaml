@@ -33,6 +33,7 @@
           - heif-pixbuf-loader
           - libheif-tools
           - neovim
+          - kate
           - google-noto-sans-runic-fonts
           - fira-code-fonts
           - fastfetch
@@ -138,6 +139,7 @@
           - krdc
           - krfb
           - ktnef
+          - kwrite
           - akregator
           - neochat
           - skanpage
