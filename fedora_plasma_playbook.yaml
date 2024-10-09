@@ -161,25 +161,30 @@
       community.general.flatpak:
         state: present
         name:
-          - chat.simplex.simplex     # SimpleX Chat
-          - com.github.Anuken.Mindustry  # Mindustry
-          - com.github.wwmm.easyeffects  # Easy Effects
-          - com.heroicgameslauncher.hgl  # Heroic Games Launcher
-          - com.obsproject.Studio    # OBS Studio
-          - dev.vencord.Vesktop  # Vesktop
-          - io.mpv.Mpv   # mpv
+          - chat.simplex.simplex # SimpleX Chat
+          - com.github.Anuken.Mindustry # Mindustry
+          - com.github.wwmm.easyeffects # Easy Effects
+          - com.heroicgameslauncher.hgl # Heroic Games Launcher
+          - com.obsproject.Studio # OBS Studio
+          - dev.vencord.Vesktop # Vesktop
+          - io.mpv.Mpv # mpv
           - md.obsidian.Obsidian # Obsidian
-          - net.davidotek.pupgui2    # ProtonUp-Qt
-          - net.lutris.Lutris    # Lutris
-          - org.gimp.GIMP    # GIMP
-          - org.inkscape.Inkscape    # Inkscape
-          - org.kartkrew.RingRacers  # Ring Racers
+          - net.davidotek.pupgui2 # ProtonUp-Qt
+          - net.lutris.Lutris # Lutris
+          - org.gimp.GIMP # GIMP
+          - org.inkscape.Inkscape # Inkscape
+          - org.kartkrew.RingRacers # Ring Racers
           - org.kde.kdenlive # Kdenlive
-          - org.keepassxc.KeePassXC  # KeePassXC
-          - org.localsend.localsend_app  # LocalSend
-          - org.mozilla.Thunderbird  # Thunderbird
-          - org.prismlauncher.PrismLauncher  # Prism Launcher
-          - org.qbittorrent.qBittorrent  # qBittorrent
-          - org.signal.Signal    # Signal Desktop
-          - sh.ppy.osu   # osu!
-          - org.fooyin.fooyin # fooyin Music Player
+          - org.keepassxc.KeePassXC # KeePassXC
+          - org.localsend.localsend_app # LocalSend
+          - org.mozilla.Thunderbird # Thunderbird
+          - org.prismlauncher.PrismLauncher # Prism Launcher
+          - org.qbittorrent.qBittorrent # qBittorrent
+          - org.signal.Signal # Signal Desktop
+          - sh.ppy.osu # osu!
+          - org.fooyin.fooyin # fooyin
+          - org.wesnoth.Wesnoth # Battle for Wesnoth
+          - com.shatteredpixel.shatteredpixeldungeon # Shattered Pixel Dungeon
+          - com.todoist.Todoist # Todoist: To-Do List & Tasks
+          - io.github.martchus.syncthingtray # Syncthing Tray
+          - io.github.picocrypt.Picocrypt # Picocrypt
