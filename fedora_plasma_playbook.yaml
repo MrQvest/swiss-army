@@ -190,3 +190,5 @@
           - com.todoist.Todoist # Todoist: To-Do List & Tasks
           - io.github.martchus.syncthingtray # Syncthing Tray
           - io.github.picocrypt.Picocrypt # Picocrypt
+          - com.calibre_ebook.calibre # calibre
+          - net.openra.OpenRA # openRA
