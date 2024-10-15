@@ -62,6 +62,9 @@
           - yt-dlp
           - aria2
           - nerd-fonts
+          - torbrowser-launcher
+          - btop
+          - nvtop
 
 # ==================== RPM Fusion ==================== #
     - name: Update @core
