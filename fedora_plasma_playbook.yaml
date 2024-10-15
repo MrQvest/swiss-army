@@ -65,6 +65,7 @@
           - torbrowser-launcher
           - btop
           - nvtop
+          - gh
 
 # ==================== RPM Fusion ==================== #
     - name: Update @core
