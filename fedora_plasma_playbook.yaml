@@ -202,9 +202,8 @@
           - com.obsproject.Studio # OBS Studio
           - dev.vencord.Vesktop # Vesktop
           - io.mpv.Mpv # mpv
+          - info.smplayer.SMPlayer # SMPlayer
           - md.obsidian.Obsidian # Obsidian
-          - net.davidotek.pupgui2 # ProtonUp-Qt
-          - net.lutris.Lutris # Lutris
           - org.gimp.GIMP # GIMP
           - org.inkscape.Inkscape # Inkscape
           - org.kartkrew.RingRacers # Ring Racers
@@ -224,6 +223,8 @@
           - io.github.picocrypt.Picocrypt # Picocrypt
           - com.calibre_ebook.calibre # calibre
           - net.openra.OpenRA # openRA
+          - io.github.martinrotter.rssguard # RSS Guard
+          - org.kde.francis # Francis
 
     - name: Clone dotfiles
       when: ansible_distribution == 'Fedora'
