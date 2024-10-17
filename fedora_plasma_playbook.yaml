@@ -36,6 +36,8 @@
 
     - name: Enable Flathub repository
       when: ansible_distribution == 'Fedora'
+      become: true
+      become_method: ansible.builtin.sudo
       community.general.flatpak_remote:
         name: flathub
         state: present
@@ -56,7 +58,6 @@
           - fira-code-fonts
           - fastfetch
           - steam
-          - fish
           - akmod-nvidia
           - git-core
           - yt-dlp
@@ -204,18 +205,6 @@
       when: ansible_distribution == 'Fedora'
       ansible.builtin.command: 'git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" config --local status.showUntrackedFiles no'
 
-    - name: Restart Pipewire
+    - name: Restart systemd services
       when: ansible_distribution == 'Fedora'
-      ansible.builtin.systemd_service:
-        name: pipewire
-        scope: user
-        state: restarted
-        daemon_reload: true
-
-    - name: Restart Wireplumber
-      when: ansible_distribution == 'Fedora'
-      ansible.builtin.systemd_service:
-        name: wireplumber
-        scope: user
-        state: restarted
-        daemon_reload: true
+      ansible.builtin.command: 'systemctl restart --user pipewire wireplumber'
