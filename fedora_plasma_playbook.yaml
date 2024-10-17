@@ -145,44 +145,7 @@
       when: ansible_distribution == 'Fedora'
       become: true
       become_method: ansible.builtin.sudo
-      ansible.builtin.dnf:
-        state: absent
-        name:
-          - mediawriter
-          - kontact
-          - kmail
-          - okular
-          - dragonplayer
-          - elisa-player
-          - firewall-config
-          - kamoso
-          - kmahjongg
-          - kmines
-          - kmousetool
-          - kmouth
-          - kolourpaint
-          - kpat
-          - krdc
-          - krfb
-          - ktnef
-          - kwrite
-          - akregator
-          - neochat
-          - skanpage
-          - korganizer
-          - kaddressbook
-          - kfind
-          - kcharselect
-          - kgpg
-          - virtualbox-guest-additions
-          - kwalletmanager5
-
-    - name: Autoremove unused dependencies
-      when: ansible_distribution == 'Fedora'
-      become: true
-      become_method: ansible.builtin.sudo
-      ansible.builtin.dnf:
-        autoremove: true
+      ansible.builtin.command: "dnf remove mediawriter kontact kmail okular dragonplayer elisa-player firewall-config kamoso kmahjongg kmines kmousetool kmouth kolourpaint kpat krdc krfb ktnef kwrite akregator neochat skanpage korganizer kaddressbook kfind kcharselect kgpg virtualbox-guest-additions kwalletmanager5 -y"
 
     - name: Install Homebrew packages
       when: ansible_distribution == 'Fedora'
