@@ -67,6 +67,7 @@
           - btop
           - nvtop
           - gh
+          - mc
 
 # ==================== RPM Fusion ==================== #
     - name: Update @core
