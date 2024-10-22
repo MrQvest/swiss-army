@@ -64,6 +64,7 @@
           - aria2
         # - nerd-fonts
           - torbrowser-launcher
+          - audacious
           - btop
           - nvtop
           - gh
@@ -180,7 +181,6 @@
           - org.qbittorrent.qBittorrent # qBittorrent
           - org.signal.Signal # Signal Desktop
           - sh.ppy.osu # osu!
-          - org.fooyin.fooyin # fooyin
           - app/org.wesnoth.Wesnoth/x86_64/stable # Battle for Wesnoth
           - com.shatteredpixel.shatteredpixeldungeon # Shattered Pixel Dungeon
           - com.todoist.Todoist # Todoist: To-Do List & Tasks
