@@ -1,4 +1,4 @@
-- name: Fedora KDE Plasma playbook
+- name: Fedora Workstation playbook
   hosts: localhost
   tasks:
     - name: Import RPM Fusion GPG keys
@@ -53,7 +53,6 @@
           - heif-pixbuf-loader
           - libheif-tools
           - neovim
-          - kate
           - google-noto-sans-runic-fonts
           - fira-code-fonts
           - fish
@@ -61,10 +60,13 @@
           - steam
           - akmod-nvidia
           - git-core
+          - gnome-tweaks
+          - ffmpegthumbnailer
           - yt-dlp
           - aria2
         # - nerd-fonts
           - torbrowser-launcher
+          - transmission-gtk
           - audacious
           - btop
           - nvtop
@@ -149,7 +151,7 @@
       when: ansible_distribution == 'Fedora'
       become: true
       become_method: ansible.builtin.sudo
-      ansible.builtin.command: "dnf remove mediawriter kontact kmail dragonplayer elisa-player firewall-config kamoso kmahjongg kmines kmousetool kmouth kolourpaint kpat krdc krfb ktnef kwrite akregator neochat skanpage korganizer kaddressbook kfind kcharselect kgpg virtualbox-guest-additions qemu-guest-agent kwalletmanager5 -y"
+      ansible.builtin.command: "dnf remove rhythmbox totem gnome-extensions-app simple-scan mediawriter gnome-connections gnome-clocks gnome-contacts gnome-weather gnome-calculator gnome-tour gnome-system-monitor gnome-classic-session gnome-shell-extension-background-logo virtualbox-guest-additions qemu-guest-agent -y"
 
 #    - name: Install Homebrew packages
 #      when: ansible_distribution == 'Fedora'
@@ -183,11 +185,9 @@
           - sh.ppy.osu # osu!
           - app/org.wesnoth.Wesnoth/x86_64/stable # Battle for Wesnoth
           - com.shatteredpixel.shatteredpixeldungeon # Shattered Pixel Dungeon
-          - io.github.martchus.syncthingtray # Syncthing Tray
           - io.github.picocrypt.Picocrypt # Picocrypt
           - com.calibre_ebook.calibre # calibre
           - net.openra.OpenRA # openRA
-          - org.kde.francis # Francis
 
     - name: Clone dotfiles
       when: ansible_distribution == 'Fedora'
