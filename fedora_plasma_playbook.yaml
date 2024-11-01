@@ -1,22 +1,12 @@
 - name: Fedora KDE Plasma playbook
   hosts: localhost
   tasks:
-    - name: Import RPM Fusion GPG keys
-      when: ansible_distribution == 'Fedora'
-      become: true
-      become_method: ansible.builtin.sudo
-      ansible.builtin.rpm_key:
-        state: present
-        key: "{{ item }}"
-      loop:
-        - https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020
-        - https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
-
     - name: Enable RPM Fusion repositories
       when: ansible_distribution == 'Fedora'
       become: true
       become_method: ansible.builtin.sudo
       ansible.builtin.dnf:
+        disable_gpg_check: true
         state: present
         name:
           - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
@@ -59,6 +49,7 @@
           - fish
           - fastfetch
           - steam
+          - transmission-qt
           - akmod-nvidia
           - git-core
           - yt-dlp
@@ -149,7 +140,7 @@
       when: ansible_distribution == 'Fedora'
       become: true
       become_method: ansible.builtin.sudo
-      ansible.builtin.command: "dnf remove mediawriter kontact kmail dragonplayer elisa-player firewall-config kamoso kmahjongg kmines kmousetool kmouth kolourpaint kpat krdc krfb ktnef kwrite akregator neochat skanpage korganizer kaddressbook kfind kcharselect kgpg virtualbox-guest-additions qemu-guest-agent kwalletmanager5 -y"
+      ansible.builtin.command: "dnf remove mediawriter kontact kmail dragon elisa-player firewall-config kamoso kmahjongg kmines kmousetool kmouth kolourpaint kpat krdc krfb ktnef kwrite akregator neochat skanpage korganizer kaddressbook kfind kcharselect kgpg virtualbox-guest-additions qemu-guest-agent kwalletmanager5 krdp kjournald im-chooser -y"
 
 #    - name: Install Homebrew packages
 #      when: ansible_distribution == 'Fedora'

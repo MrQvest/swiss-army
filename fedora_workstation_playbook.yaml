@@ -1,22 +1,12 @@
 - name: Fedora Workstation playbook
   hosts: localhost
   tasks:
-    - name: Import RPM Fusion GPG keys
-      when: ansible_distribution == 'Fedora'
-      become: true
-      become_method: ansible.builtin.sudo
-      ansible.builtin.rpm_key:
-        state: present
-        key: "{{ item }}"
-      loop:
-        - https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020
-        - https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
-
     - name: Enable RPM Fusion repositories
       when: ansible_distribution == 'Fedora'
       become: true
       become_method: ansible.builtin.sudo
       ansible.builtin.dnf:
+        disable_gpg_check: true
         state: present
         name:
           - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
@@ -67,7 +57,6 @@
         # - nerd-fonts
           - torbrowser-launcher
           - transmission-gtk
-          - audacious
           - btop
           - nvtop
           - gh
@@ -151,7 +140,7 @@
       when: ansible_distribution == 'Fedora'
       become: true
       become_method: ansible.builtin.sudo
-      ansible.builtin.command: "dnf remove rhythmbox totem gnome-extensions-app simple-scan mediawriter gnome-connections gnome-clocks gnome-contacts gnome-weather gnome-calculator gnome-tour gnome-system-monitor gnome-classic-session gnome-shell-extension-background-logo virtualbox-guest-additions qemu-guest-agent -y"
+      ansible.builtin.command: "dnf remove totem gnome-extensions-app simple-scan mediawriter gnome-connections gnome-clocks gnome-contacts gnome-weather gnome-calculator gnome-tour gnome-system-monitor gnome-classic-session gnome-shell-extension-background-logo virtualbox-guest-additions qemu-guest-agent -y"
 
 #    - name: Install Homebrew packages
 #      when: ansible_distribution == 'Fedora'
