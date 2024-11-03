@@ -1,0 +1,12 @@
+- name: push .desktop files
+  copy:
+    src: "{{ item }}"
+    dest: "{{ user_home_dir }}/.local/share/applications/{{ item }}"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+  loop:
+    - com.github.Anuken.Mindustry.desktop
+    - com.shatteredpixel.shatteredpixeldungeon.desktop
+    - org.kartkrew.RingRacers.desktop
+    - org.wesnoth.Wesnoth.desktop
+    - sh.ppy.osu.desktop

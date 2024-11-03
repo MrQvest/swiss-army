@@ -1,0 +1,25 @@
+[Desktop Entry]
+Categories=Game;
+Comment[pt_BR]=A free-to-win rhythm game. Rhythm is just a *click* away!
+Comment=A free-to-win rhythm game. Rhythm is just a *click* away!
+Exec=gamemoderun flatpak run --branch=stable --arch=x86_64 --command=start-osu --file-forwarding sh.ppy.osu @@ %F @@
+GenericName[pt_BR]=
+GenericName=
+Icon=sh.ppy.osu
+MimeType=application/zip;application/x-osu-storyboard;application/x-osu-skin-archive;application/x-osu-replay;application/x-osu-beatmap-archive;application/x-osu-beatmap;
+Name[pt_BR]=osu!
+Name=osu!
+Path=
+PrefersNonDefaultGPU=true
+StartupNotify=true
+StartupWMClass=osu!
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.4
+X-Desktop-File-Install-Version=0.27
+X-Flatpak=sh.ppy.osu
+X-Flatpak-RenamedFrom=osu!.desktop;
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+X-SingleMainWindow=true

@@ -1,0 +1,11 @@
+- name: Install Steam
+  package:
+    state: present
+    name: steam
+
+- name: Push steam.desktop
+  copy:
+    src: steam.desktop
+    dest: "{{ user_home_dir }}/.local/share/applications/"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"

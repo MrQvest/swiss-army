@@ -1,0 +1,15 @@
+- name: Install system packages
+  when: ansible_distribution == 'Fedora'
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.dnf:
+    state: present
+    name:
+      - gnome-tweaks
+      - ffmpegthumbnailer
+
+- name: Remove not needed packages
+  when: ansible_distribution == 'Fedora'
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.command: "dnf remove rhythmbox totem gnome-extensions-app simple-scan mediawriter gnome-connections gnome-clocks gnome-contacts gnome-weather gnome-calculator gnome-tour gnome-system-monitor gnome-classic-session gnome-shell-extension-background-logo virtualbox-guest-additions qemu-guest-agent -y"

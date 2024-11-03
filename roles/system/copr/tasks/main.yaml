@@ -1,0 +1,11 @@
+     - name: Enable copr repositories
+       when: ansible_distribution == 'Fedora'
+       become: true
+       become_method: ansible.builtin.sudo
+       community.general.copr:
+         host: copr.fedorainfracloud.org
+         state: enabled
+         name: "{{ item }}"
+       loop:
+        - che/nerd-fonts
+        - atim/starship

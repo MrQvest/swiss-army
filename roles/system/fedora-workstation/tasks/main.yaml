@@ -1,0 +1,2 @@
+- include_tasks: flatpaks.yaml
+- include_tasks: packages.yaml

@@ -1,0 +1,14 @@
+- name: Install mc
+  package:
+    state: present
+    name: mc
+
+- name: push mc config
+  copy:
+    src: "{{ item }}"
+    dest: "{{ user_home_dir }}/.config/mc/{{ item }}"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+  loop:
+    - ini
+    - panels.ini

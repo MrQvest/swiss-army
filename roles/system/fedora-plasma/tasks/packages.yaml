@@ -1,0 +1,14 @@
+- name: Install system packages
+  when: ansible_distribution == 'Fedora'
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.dnf:
+    state: present
+    name:
+      - kate
+
+- name: Remove not needed packages
+  when: ansible_distribution == 'Fedora'
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.command: "dnf remove mediawriter kontact kmail dragon elisa-player firewall-config kamoso kmahjongg kmines kmousetool kmouth kolourpaint kpat krdc krfb ktnef kwrite akregator neochat skanpage korganizer kaddressbook kfind kcharselect kgpg virtualbox-guest-additions qemu-guest-agent kwalletmanager5 krdp kjournald im-chooser -y"

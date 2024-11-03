@@ -1,0 +1,9 @@
+- name: push easyeffects presets
+  copy:
+    src: "{{ item }}"
+    dest: "{{ user_home_dir }}/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/{{ item }}"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+  loop:
+    - Laptop.json
+    - No Effects.json

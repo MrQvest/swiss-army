@@ -1,0 +1,21 @@
+[Desktop Entry]
+Categories=Game;
+Comment[pt_BR]=Roguelike RPG, with pixel art graphics and lots of variety and replayability
+Comment=Roguelike RPG, with pixel art graphics and lots of variety and replayability
+Exec=gamemoderun flatpak run --branch=stable --arch=x86_64 --command=com.shatteredpixel.shatteredpixeldungeon.sh com.shatteredpixel.shatteredpixeldungeon
+GenericName[pt_BR]=
+GenericName=
+Icon=com.shatteredpixel.shatteredpixeldungeon
+MimeType=
+Name[pt_BR]=Shattered Pixel Dungeon
+Name=Shattered Pixel Dungeon
+Path=
+PrefersNonDefaultGPU=true
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-Flatpak=com.shatteredpixel.shatteredpixeldungeon
+X-KDE-SubstituteUID=false
+X-KDE-Username=

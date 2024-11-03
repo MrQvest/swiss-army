@@ -1,0 +1,27 @@
+- name: Fedora Workstation playbook
+  hosts: localhost
+  become: true
+  become_method: ansible.builtin.sudo
+
+  vars:
+    desktop: "gnome"
+    target_group: ian
+    target_user: ian
+    user_home_dir: /home/ian
+
+  roles:
+     - role: system/rpmfusion
+     - role: system/flatpak
+     - role: system/default
+     - role: system/fedora-workstation
+     - role: system/nvidia
+     - role: apps/transmission
+     - role: apps/mc
+     - role: apps/steam
+     - role: apps/bash
+     - role: apps/easyeffects
+     - role: apps/fish
+     - role: apps/games
+     - role: apps/mpv
+     - role: apps/topgrade
+     - role: apps/wireplumber

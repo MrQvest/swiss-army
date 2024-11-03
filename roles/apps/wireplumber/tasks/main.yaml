@@ -1,0 +1,8 @@
+- name: push wireplumber config
+  copy:
+    src: "{{ item }}"
+    dest: "{{ user_home_dir }}/.config/wireplumber/wireplumber.conf.d/{{ item }}"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+  loop:
+    - 51-disable-suspension.conf

@@ -1,0 +1,10 @@
+- name: push fish config
+  copy:
+    src: "{{ item }}"
+    dest: "{{ user_home_dir }}/.config/fish/{{ item }}"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+  loop:
+    - functions
+    - config.fish
+    - fish_variables

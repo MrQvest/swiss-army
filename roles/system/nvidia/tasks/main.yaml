@@ -1,0 +1,5 @@
+- name: Install NVIDIA Driver
+  when: ansible_distribution == 'Fedora'
+  package:
+    state: present
+    name: akmod-nvidia

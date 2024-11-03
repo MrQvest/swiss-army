@@ -1,0 +1,11 @@
+- name: Install flatpak
+  package:
+    name: flatpak
+    state: present
+
+- name: Enable Flathub repository
+  become: true
+  community.general.flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo

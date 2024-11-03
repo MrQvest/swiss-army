@@ -1,0 +1,11 @@
+- name: Install transmission-qt
+  package:
+    state: present
+    name: transmission-qt
+  when: desktop == "plasma"
+
+- name: Install transmission-gtk
+  package:
+    state: present
+    name: transmission-gtk
+  when: desktop == "gnome"

@@ -1,0 +1,21 @@
+[Desktop Entry]
+Categories=Game;
+Comment[pt_BR]=This is Racing at the Next Level
+Comment=This is Racing at the Next Level
+Exec=gamemoderun flatpak run --branch=stable --arch=x86_64 --command=ringracers.sh org.kartkrew.RingRacers
+GenericName[pt_BR]=
+GenericName=
+Icon=org.kartkrew.RingRacers
+MimeType=
+Name[pt_BR]=Dr. Robotnik's Ring Racers
+Name=Dr. Robotnik's Ring Racers
+Path=
+PrefersNonDefaultGPU=true
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-Flatpak=org.kartkrew.RingRacers
+X-KDE-SubstituteUID=false
+X-KDE-Username=

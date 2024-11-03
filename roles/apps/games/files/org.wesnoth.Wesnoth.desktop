@@ -1,0 +1,28 @@
+[Desktop Action Editor]
+Exec=gamemoderun flatpak run --branch=stable --arch=x86_64 --command=sh org.wesnoth.Wesnoth -c 'wesnoth -e  >/dev/null 2>&1'
+Name[pt_BR]=Editor de mapas
+Name=Map Editor
+
+[Desktop Entry]
+Actions=Editor;
+Categories=Game;StrategyGame;
+Comment[pt_BR]=Um jogo de fantasia estratégico em turnos
+Comment=Um jogo de fantasia estratégico em turnos
+Exec=gamemoderun flatpak run --branch=stable --arch=x86_64 --command=sh org.wesnoth.Wesnoth -c 'wesnoth >/dev/null 2>&1'
+GenericName[pt_BR]=Jogo de Estratégia
+GenericName=Jogo de Estratégia
+Icon=org.wesnoth.Wesnoth
+Keywords=singleplayer;multiplayer;dark age;middle ages;medieval;mediaeval;
+MimeType=
+Name[pt_BR]=A Batalha por Wesnoth
+Name=A Batalha por Wesnoth
+Path=
+PrefersNonDefaultGPU=true
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-Flatpak=org.wesnoth.Wesnoth
+X-KDE-SubstituteUID=false
+X-KDE-Username=
