@@ -1,3 +1,17 @@
+- name: create mpv config directory
+  file:
+    state: directory
+    path: "{{ user_home_dir }}/.config/mpv"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+
+- name: create mpv flatpak config directory
+  file:
+    state: directory
+    path: "{{ user_home_dir }}/.var/app/io.mpv.Mpv/config/mpv"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+
 - name: push mpv config
   copy:
     src: "{{ item }}"
@@ -5,7 +19,7 @@
     owner: "{{ target_user }}"
     group: "{{ target_group }}"
   loop:
-    - scripts
+    - scripts/
     - mpv.conf
 
 - name: push mpv config to flatpak
@@ -15,5 +29,5 @@
     owner: "{{ target_user }}"
     group: "{{ target_group }}"
   loop:
-    - scripts
+    - scripts/
     - mpv.conf

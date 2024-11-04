@@ -1,3 +1,10 @@
+- name: create easyeffects config directory
+  file:
+    state: directory
+    path: "{{ user_home_dir }}/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+
 - name: push easyeffects presets
   copy:
     src: "{{ item }}"

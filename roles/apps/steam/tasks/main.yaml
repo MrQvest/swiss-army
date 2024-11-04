@@ -2,10 +2,19 @@
   package:
     state: present
     name: steam
-
-- name: Push steam.desktop
+  
+- name: Push steam-plasma.desktop
   copy:
-    src: steam.desktop
-    dest: "{{ user_home_dir }}/.local/share/applications/"
+    src: steam-plasma.desktop
+    dest: "{{ user_home_dir }}/.local/share/applications/steam.desktop"
     owner: "{{ target_user }}"
     group: "{{ target_group }}"
+  when: desktop == "plasma"
+
+- name: Push steam-gnome.desktop
+  copy:
+    src: steam-gnome.desktop
+    dest: "{{ user_home_dir }}/.local/share/applications/steam.desktop"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+  when: desktop == "gnome"

@@ -1,3 +1,10 @@
+- name: create wireplumber config directory
+  file:
+    state: directory
+    path: "{{ user_home_dir }}/.config/wireplumber/wireplumber.conf.d"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+
 - name: push wireplumber config
   copy:
     src: "{{ item }}"
