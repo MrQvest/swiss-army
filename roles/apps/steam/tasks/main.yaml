@@ -2,7 +2,14 @@
   package:
     state: present
     name: steam
-  
+
+- name: create user applications directory
+  file:
+    state: directory
+    path: "{{ user_home_dir }}/.local/share/applications"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+
 - name: Push steam-plasma.desktop
   copy:
     src: steam-plasma.desktop

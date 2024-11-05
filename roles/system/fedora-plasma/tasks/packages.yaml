@@ -5,6 +5,7 @@
   ansible.builtin.dnf:
     state: present
     name:
+      - langpacks-pt_BR
       - kate
 
 - name: Remove not needed packages
