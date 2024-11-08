@@ -25,3 +25,4 @@
      - role: apps/mpv
      - role: apps/topgrade
      - role: apps/wireplumber
+     - role: apps/tor

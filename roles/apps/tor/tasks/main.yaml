@@ -1,0 +1,5 @@
+- name: install tor browser
+  package:
+    state: present
+    name:
+      - torbrowser-launcher
