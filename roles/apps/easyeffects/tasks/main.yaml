@@ -5,6 +5,8 @@
     owner: "{{ target_user }}"
     group: "{{ target_group }}"
 
+# Grabbed Laptop.json from JackHack96
+# https://github.com/JackHack96/EasyEffects-Presets
 - name: push easyeffects presets
   copy:
     src: "{{ item }}"
