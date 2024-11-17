@@ -1,0 +1,4 @@
+- name: Install Restic
+  package:
+    state: present
+    name: restic
