@@ -1,20 +1,20 @@
-    - name: Install default system packages
-      when: ansible_distribution == 'Fedora'
-      become: true
-      become_method: ansible.builtin.sudo
-      ansible.builtin.dnf:
-        state: present
-        name:
-          - heif-pixbuf-loader
-          - libheif-tools
-          - neovim
-          - google-noto-sans-runic-fonts
-          - fira-code-fonts
-          - fastfetch
-          - git-core
-          - yt-dlp
-          - aria2
-        # - nerd-fonts
-          - btop
-          - nvtop
-          - gh
+- name: Install default system packages
+  when: ansible_distribution == 'Fedora'
+  become: true
+  become_method: ansible.builtin.sudo
+  ansible.builtin.dnf:
+    state: present
+    name:
+      - heif-pixbuf-loader
+      - libheif-tools
+      - neovim
+      - google-noto-sans-runic-fonts
+      - fira-code-fonts
+      - fastfetch
+      - git-core
+      - yt-dlp
+      - aria2
+    # - nerd-fonts
+      - btop
+      - nvtop
+      - gh

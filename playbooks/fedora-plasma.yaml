@@ -16,7 +16,7 @@
      - role: system/fedora-plasma
      - role: system/nvidia
      - role: apps/transmission
-     - role: apps/restic
+     - role: apps/rclone
      - role: apps/steam
      - role: apps/bash
      - role: apps/easyeffects
