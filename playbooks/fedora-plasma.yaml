@@ -17,6 +17,7 @@
      - role: system/nvidia
      - role: apps/transmission
      - role: apps/rclone
+     - role: apps/restic
      - role: apps/steam
      - role: apps/bash
      - role: apps/easyeffects
