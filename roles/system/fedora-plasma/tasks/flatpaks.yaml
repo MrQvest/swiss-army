@@ -26,5 +26,5 @@
       - io.github.picocrypt.Picocrypt # Picocrypt
       - com.calibre_ebook.calibre # calibre
       - net.openra.OpenRA # openRA
-      - org.kde.francis # Francis
+      - net.fasterland.converseen # Converseen
       - org.fooyin.fooyin # fooyin
