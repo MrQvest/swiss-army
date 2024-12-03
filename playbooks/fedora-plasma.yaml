@@ -15,7 +15,6 @@
      - role: system/default
      - role: system/fedora-plasma
      - role: system/nvidia
-     - role: apps/transmission
      - role: apps/rclone
      - role: apps/restic
      - role: apps/steam

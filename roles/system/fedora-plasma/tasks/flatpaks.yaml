@@ -28,3 +28,4 @@
       - net.openra.OpenRA # openRA
       - net.fasterland.converseen # Converseen
       - org.fooyin.fooyin # fooyin
+      - org.qbittorrent.qBittorrent # qBittorrent
