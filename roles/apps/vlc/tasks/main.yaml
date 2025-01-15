@@ -1,0 +1,5 @@
+- name: install vlc media player
+  package:
+    state: present
+    name:
+      - vlc
