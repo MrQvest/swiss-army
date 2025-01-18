@@ -1,0 +1,4 @@
+- name: Install chromium browser
+  package:
+    state: present
+    name: chromium

@@ -20,6 +20,7 @@
      - role: apps/restic
      - role: apps/steam
      - role: apps/bash
+     - role: apps/chromium
      - role: apps/easyeffects
      - role: apps/fish
      - role: apps/games
