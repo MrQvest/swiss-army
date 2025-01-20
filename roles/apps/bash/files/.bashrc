@@ -27,7 +27,6 @@ unset rc
 # Aliases
 alias mpv='flatpak run io.mpv.Mpv'
 alias neofetch='fastfetch --config neofetch'
-alias dotfiles='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
 # Homebrew PATH
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
