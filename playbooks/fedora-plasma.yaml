@@ -23,7 +23,7 @@
      - role: apps/chromium
      - role: apps/easyeffects
      - role: apps/fish
-     - role: apps/games
+     - role: apps/desktop
      - role: apps/mpv
      - role: apps/vlc
      - role: apps/topgrade

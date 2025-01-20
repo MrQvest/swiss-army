@@ -24,7 +24,7 @@
      - role: apps/chromium
      - role: apps/easyeffects
      - role: apps/fish
-     - role: apps/games
+     - role: apps/desktop
      - role: apps/mpv
      - role: apps/topgrade
      - role: apps/wireplumber
