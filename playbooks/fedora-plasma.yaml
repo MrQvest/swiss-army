@@ -11,6 +11,7 @@
 
   roles:
      - role: system/rpmfusion
+     - role: system/multimedia
      - role: system/flatpak
      - role: system/default
      - role: system/fedora-plasma

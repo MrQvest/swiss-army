@@ -1,27 +1,19 @@
     - name: Update @core
       when: ansible_distribution == 'Fedora'
-      become: true
-      become_method: ansible.builtin.sudo
       ansible.builtin.dnf:
-        state: present
+        state: latest
         name: "@core"
 
     - name: FFmpeg
       when: ansible_distribution == 'Fedora'
-      become: true
-      become_method: ansible.builtin.sudo
       ansible.builtin.command: "dnf swap ffmpeg-free ffmpeg --allowerasing -y"
 
     - name: Codecs
       when: ansible_distribution == 'Fedora'
-      become: true
-      become_method: ansible.builtin.sudo
       ansible.builtin.command: 'dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y'
 
     - name: Install hardware accelerated codecs
       when: ansible_distribution == 'Fedora'
-      become: true
-      become_method: ansible.builtin.sudo
       ansible.builtin.dnf:
         state: present
         name:
@@ -31,8 +23,6 @@
 
     - name: Install DVD repository
       when: ansible_distribution == 'Fedora'
-      become: true
-      become_method: ansible.builtin.sudo
       ansible.builtin.dnf:
         state: present
         name:
@@ -40,8 +30,6 @@
 
     - name: DVD
       when: ansible_distribution == 'Fedora'
-      become: true
-      become_method: ansible.builtin.sudo
       ansible.builtin.dnf:
         state: present
         name:
@@ -49,8 +37,6 @@
 
     - name: Firmware repo
       when: ansible_distribution == 'Fedora'
-      become: true
-      become_method: ansible.builtin.sudo
       ansible.builtin.dnf:
         state: present
         name:
@@ -58,6 +44,4 @@
 
     - name: Install firmwares
       when: ansible_distribution == 'Fedora'
-      become: true
-      become_method: ansible.builtin.sudo
       ansible.builtin.command: 'dnf --repo=rpmfusion-nonfree-tainted install "*-firmware" -y'
