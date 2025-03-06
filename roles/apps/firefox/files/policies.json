@@ -1,0 +1,53 @@
+{
+  "policies": {
+    "DisableFirefoxStudies": true
+    "DisableFormHistory": true
+    "DisablePocket": true
+    "DisableTelemetry": true
+    "HttpsOnlyMode": "enabled"
+    "HardwareAcceleration": true
+    "DisplayBookmarksToolbar": "always"
+    "NoDefaultBookmarks": true
+    "OfferToSaveLogins": false
+    "OfferToSaveLoginsDefault": false
+    "OverrideFirstRunPage": ""
+    "PasswordManagerEnabled": false
+    "SearchSuggestEnabled": false
+    "EnableTrackingProtection": {
+      "Value": true,
+      "Cryptomining": true,
+      "Fingerprinting": true
+    }
+    "ExtensionSettings": {
+      "uBlock0@raymondhill.net": {
+        "installation_mode": "force_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi",
+        "private_browsing": true
+      }
+    }
+    "FirefoxHome": {
+      "Search": true,
+      "TopSites": true,
+      "SponsoredTopSites": false,
+      "Highlights": false,
+      "Pocket": false,
+      "SponsoredPocket": false,
+      "Snippets": false,
+      "Locked": false
+    }
+    "Homepage": {
+      "StartPage": "homepage"
+    }
+    "InstallAddonsPermission": {
+      "Allow": "https://addons.mozzila.org"
+    }
+    "UserMessaging": {
+      "ExtensionRecommendations": false,
+      "FeatureRecommendations": true,
+      "UrlbarInterventions": false,
+      "SkipOnboarding": true,
+      "MoreFromMozilla": false,
+      "FirefoxLabs": false,
+      "Locked": false
+    }
+}
