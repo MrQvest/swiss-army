@@ -1,0 +1,8 @@
+- name: Push firefox policies.json
+  copy:
+    src: "{{ item }}"
+    dest: "/etc/firefox/policies"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+  loop:
+    - policies.json
