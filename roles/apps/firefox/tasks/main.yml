@@ -1,8 +1,15 @@
+- name: Create system-wide firefox policies directory
+  file:
+    state: directory
+    path: "/etc/firefox/policies"
+    mode: "0755"
+
 - name: Push firefox policies.json
   copy:
     src: "{{ item }}"
-    dest: "/etc/firefox/policies"
+    dest: "/etc/firefox/policies/{{ item }}"
     owner: "{{ target_user }}"
     group: "{{ target_group }}"
+    mode: "0644"
   loop:
     - policies.json
