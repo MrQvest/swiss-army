@@ -1,0 +1,9 @@
+{
+  "MetricsReportingEnabled": false,
+  "AutofillAddressEnabled": false,
+  "AutofillCreditCardEnabled": false,
+  "DefaultCookiesSetting": 4,
+  "DefaultSensorsSetting": 2,
+  "ExtensionInstallSources": ["https://chromewebstore.google.com/"],
+  "PasswordManagerEnabled": false
+}

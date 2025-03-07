@@ -12,11 +12,6 @@
     "OverrideFirstRunPage": "",
     "PasswordManagerEnabled": false,
     "SearchSuggestEnabled": false,
-    "EnableTrackingProtection": {
-      "Value": true,
-      "Cryptomining": true,
-      "Fingerprinting": true
-    },
     "ExtensionSettings": {
       "uBlock0@raymondhill.net": {
         "installation_mode": "force_installed",

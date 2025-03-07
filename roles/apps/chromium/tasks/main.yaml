@@ -2,3 +2,19 @@
   package:
     state: present
     name: chromium
+
+- name: Create system-wide chromium policies directory
+  file:
+    state: directory
+    path: "/etc/chromium/policies/managed"
+    mode: "0755"
+
+- name: Push chromium policies.json
+  copy:
+    src: "{{ item }}"
+    dest: "/etc/chromium/policies/managed/{{ item }}"
+    owner: "{{ target_user }}"
+    group: "{{ target_group }}"
+    mode: "0644"
+  loop:
+    - policies.json
