@@ -1,11 +1,18 @@
 [Desktop Entry]
 Categories=Game;
+Comment=
 Exec=gamemoderun flatpak run --branch=stable --arch=x86_64 --command=SS14.Launcher com.spacestation14.Launcher
 Icon=com.spacestation14.Launcher
 Keywords=ss14;
 Name=Space Station 14
+NoDisplay=false
+Path=
+PrefersNonDefaultGPU=true
 StartupNotify=true
 Terminal=false
+TerminalOptions=
 Type=Application
 X-Flatpak=com.spacestation14.Launcher
-PrefersNonDefaultGPU=true
+X-KDE-RunOnDiscreteGpu=true
+X-KDE-SubstituteUID=false
+X-KDE-Username=
