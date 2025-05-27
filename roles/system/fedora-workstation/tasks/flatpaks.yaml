@@ -13,7 +13,7 @@
       - org.inkscape.Inkscape # Inkscape
       - org.kartkrew.RingRacers # Ring Racers
       - org.kde.kdenlive # Kdenlive
-      - org.gnome.World.Secrets # KeepassXC for GNOME
+      - org.keepassxc.KeePassXC # KeePassXC
       - org.prismlauncher.PrismLauncher # Prism Launcher
       - org.signal.Signal # Signal Desktop
       - sh.ppy.osu # osu!
