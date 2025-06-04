@@ -7,7 +7,7 @@
     name:
       - langpacks-pt_BR
     # - kate
-    # - vulkan-loader-devel
+      - vulkan-loader-devel
 
 - name: Remove not needed packages
   when: ansible_distribution == 'Fedora'

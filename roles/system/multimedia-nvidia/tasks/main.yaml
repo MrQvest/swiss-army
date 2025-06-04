@@ -12,21 +12,12 @@
       when: ansible_distribution == 'Fedora'
       ansible.builtin.command: 'dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y'
 
-    - name: Install hardware accelerated AMD codecs (va-drivers)
+    - name: Install hardware accelerated codecs
       when: ansible_distribution == 'Fedora'
-      ansible.builtin.command: "sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld -y"
-
-    - name: Install hardware accelerated AMD codecs (vdpau-drivers)
-      when: ansible_distribution == 'Fedora'
-      ansible.builtin.command: "sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld -y"
-
-    - name: Install hardware accelerated AMD codecs (va-drivers steam)
-      when: ansible_distribution == 'Fedora'
-      ansible.builtin.command: "sudo dnf swap mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686 -y"
-
-    - name: Install hardware accelerated AMD codecs (vdpau-drivers steam)
-      when: ansible_distribution == 'Fedora'
-      ansible.builtin.command: "sudo dnf swap mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686 -y"
+      ansible.builtin.dnf:
+        state: present
+        name:
+          - libva-nvidia-driver
 
     - name: Install DVD repository
       when: ansible_distribution == 'Fedora'

@@ -13,8 +13,8 @@
       - fastfetch
       - git-core
       - yt-dlp
-      - aria2
+    # - aria2
     # - nerd-fonts
       - btop
-      - nvtop
+    # - nvtop
       - gh

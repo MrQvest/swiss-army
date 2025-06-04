@@ -15,6 +15,7 @@
      - role: system/flatpak
      - role: system/default
      - role: system/fedora-plasma
+     - role: system/nvidia
      - role: apps/rclone
      - role: apps/restic
      - role: apps/steam
@@ -25,6 +26,6 @@
      - role: apps/desktop
      - role: apps/mpv
      - role: apps/vlc
-   # - role: apps/topgrade
+     - role: apps/topgrade
      - role: apps/wireplumber
      - role: apps/tor
