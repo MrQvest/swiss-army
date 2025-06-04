@@ -28,3 +28,5 @@
       - com.spacestation14.Launcher # Space Station 14 Launcher
       - com.super_productivity.SuperProductivity # Super Productivity
       - org.kde.krita # Krita
+      - org.freedesktop.Platform.VulkanLayer.MangoHud # Mangohud
+      - org.freedesktop.Platform.VulkanLayer.gamescope # gamescope

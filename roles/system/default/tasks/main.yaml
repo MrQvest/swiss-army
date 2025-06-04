@@ -16,5 +16,7 @@
     # - aria2
     # - nerd-fonts
       - btop
-    # - nvtop
+      - nvtop
       - gh
+      - gamescope
+      - mangohud
