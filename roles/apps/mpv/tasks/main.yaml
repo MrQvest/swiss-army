@@ -19,6 +19,7 @@
     owner: "{{ target_user }}"
     group: "{{ target_group }}"
   loop:
+    - fonts/
     - scripts/
     - mpv.conf
 
@@ -29,5 +30,6 @@
     owner: "{{ target_user }}"
     group: "{{ target_group }}"
   loop:
+    - fonts/
     - scripts/
     - mpv.conf
