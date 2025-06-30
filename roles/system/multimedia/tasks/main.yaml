@@ -8,10 +8,6 @@
       when: ansible_distribution == 'Fedora'
       ansible.builtin.command: "dnf swap ffmpeg-free ffmpeg --allowerasing -y"
 
-    - name: Codecs
-      when: ansible_distribution == 'Fedora'
-      ansible.builtin.command: 'dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y'
-
     - name: Install hardware accelerated AMD codecs (va-drivers)
       when: ansible_distribution == 'Fedora'
       ansible.builtin.command: "sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld -y"

@@ -5,8 +5,7 @@
   ansible.builtin.dnf:
     state: present
     name:
-      - heif-pixbuf-loader
-      - libheif-tools
+      - libheif-freeworld
       - neovim
       - google-noto-sans-runic-fonts
       - fira-code-fonts

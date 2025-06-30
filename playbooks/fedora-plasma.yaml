@@ -24,7 +24,7 @@
      - role: apps/fish
      - role: apps/desktop
      - role: apps/mpv
-     - role: apps/vlc
+   # - role: apps/vlc
    # - role: apps/topgrade
      - role: apps/wireplumber
      - role: apps/tor
