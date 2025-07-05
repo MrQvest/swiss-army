@@ -18,5 +18,3 @@
     group: "{{ target_group }}"
   loop:
     - functions/
-    - config.fish
-    - fish_variables

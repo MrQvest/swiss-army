@@ -18,11 +18,11 @@
      - role: apps/rclone
      - role: apps/restic
      - role: apps/steam
-     - role: apps/bash
+   # - role: apps/bash
    # - role: apps/chromium
-     - role: apps/easyeffects
+   # - role: apps/easyeffects
      - role: apps/fish
-     - role: apps/desktop
+   # - role: apps/desktop
      - role: apps/mpv
    # - role: apps/vlc
    # - role: apps/topgrade

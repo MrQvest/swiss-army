@@ -1,9 +1,3 @@
-    - name: Update @core
-      when: ansible_distribution == 'Fedora'
-      ansible.builtin.dnf:
-        state: latest
-        name: "@core"
-
     - name: FFmpeg
       when: ansible_distribution == 'Fedora'
       ansible.builtin.command: "dnf swap ffmpeg-free ffmpeg --allowerasing -y"

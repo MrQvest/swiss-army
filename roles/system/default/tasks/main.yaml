@@ -6,9 +6,9 @@
     state: present
     name:
       - libheif-freeworld
-      - neovim
+    # - neovim
       - google-noto-sans-runic-fonts
-      - fira-code-fonts
+    # - fira-code-fonts
       - fastfetch
       - git-core
       - yt-dlp
@@ -17,5 +17,5 @@
       - btop
       - nvtop
       - gh
-      - gamescope
+    # - gamescope
       - mangohud
