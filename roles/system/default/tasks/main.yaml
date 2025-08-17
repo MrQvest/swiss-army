@@ -14,8 +14,6 @@
       - yt-dlp
     # - aria2
     # - nerd-fonts
-      - btop
-      - nvtop
       - gh
     # - gamescope
       - mangohud

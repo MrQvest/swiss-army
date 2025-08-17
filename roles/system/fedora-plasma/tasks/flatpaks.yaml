@@ -9,8 +9,8 @@
       - org.keepassxc.KeePassXC # KeePassXC
       - org.prismlauncher.PrismLauncher # Prism Launcher
       - org.signal.Signal # Signal Desktop
-      - sh.ppy.osu # osu!
       - io.github.martchus.syncthingtray # Syncthing Tray
       - org.fooyin.fooyin # fooyin
       - org.qbittorrent.qBittorrent # qBittorrent
       - com.spacestation14.Launcher # Space Station 14 Launcher
+      - it.mijorus.gearlever # Gear Lever (AppImage manager)
