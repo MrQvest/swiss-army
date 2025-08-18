@@ -14,3 +14,4 @@
       - org.qbittorrent.qBittorrent # qBittorrent
       - com.spacestation14.Launcher # Space Station 14 Launcher
       - it.mijorus.gearlever # Gear Lever (AppImage manager)
+      - org.fedoraproject.MediaWriter # Fedora Media Writer
