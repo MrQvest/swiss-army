@@ -3,14 +3,17 @@
     name:
       - com.heroicgameslauncher.hgl # Heroic Games Launcher
       - dev.vencord.Vesktop # Vesktop
+      - com.github.wwmm.easyeffects # EasyEffects
       - io.mpv.Mpv # mpv
       - md.obsidian.Obsidian # Obsidian
-      - org.kde.kdenlive # Kdenlive
       - org.keepassxc.KeePassXC # KeePassXC
       - org.prismlauncher.PrismLauncher # Prism Launcher
       - org.signal.Signal # Signal Desktop
-      - io.github.martchus.syncthingtray # Syncthing Tray
+      - com.github.zocker_160.SyncThingy # SyncThingy
+      - com.github.Matoking.protontricks # Protontricks
       - org.fooyin.fooyin # fooyin
+      - org.kde.kalk # Calculator
+      - org.kde.kclock # Clock
       - org.qbittorrent.qBittorrent # qBittorrent
       - com.spacestation14.Launcher # Space Station 14 Launcher
       - it.mijorus.gearlever # Gear Lever (AppImage manager)
